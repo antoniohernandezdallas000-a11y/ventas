@@ -1,0 +1,918 @@
+/* Reset & Shopify Style CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    color: #121212;
+    background-color: #ffffff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+/* Header */
+.shopify-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1.25rem 0;
+}
+
+.header-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.header-logo {
+    grid-column: 1;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.header-nav {
+    grid-column: 2;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgba(18, 18, 18, 0.75);
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #121212;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.header-icons {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
+}
+
+.icon-link {
+    font-size: 1.2rem;
+    color: #121212;
+    position: relative;
+}
+
+.cart-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #121212;
+    color: #ffffff;
+    font-size: 0.65rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Main Layout */
+.main-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* Product Container */
+.product-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    margin-bottom: 5rem;
+}
+
+.product-media {
+    width: 100%;
+}
+
+.media-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+/* Product Info */
+.product-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.vendor-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(18, 18, 18, 0.6);
+}
+
+.product-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.price-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.price-compare {
+    text-decoration: line-through;
+    color: rgba(18, 18, 18, 0.5);
+}
+
+.price-sale {
+    font-weight: 700;
+    color: #121212;
+}
+
+.badge-sale {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 0.25rem 0.6rem;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tax-shipping-info {
+    font-size: 0.78rem;
+    color: rgba(18, 18, 18, 0.7);
+}
+
+/* Quantity Selector */
+.quantity-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.quantity-selector label {
+    font-size: 0.85rem;
+    color: rgba(18, 18, 18, 0.75);
+}
+
+.quantity-input-wrapper {
+    display: flex;
+    border: 1px solid rgba(18, 18, 18, 0.15);
+    border-radius: 4px;
+    width: 120px;
+    height: 45px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qty-btn {
+    background: transparent;
+    border: none;
+    width: 35px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.quantity-input-wrapper input {
+    border: none;
+    text-align: center;
+    width: 40px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    outline: none;
+}
+
+/* Remove spin arrows in inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Checkout Buttons */
+.checkout-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.btn-shopify-primary, .btn-shopify-secondary, .btn-shoppay {
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+}
+
+.btn-shopify-secondary {
+    background-color: transparent;
+    border: 1px solid #121212;
+    color: #121212;
+}
+
+.btn-shopify-secondary:hover {
+    background-color: rgba(18, 18, 18, 0.04);
+    border-width: 1.5px;
+}
+
+.btn-shopify-primary {
+    background-color: #121212;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-shopify-primary:hover {
+    background-color: #2b2b2b;
+}
+
+.btn-shoppay {
+    background-color: #5a31f4;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-shoppay:hover {
+    background-color: #4924cf;
+}
+
+.shoppay-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.shoppay-text .bold {
+    font-weight: 800;
+}
+
+.shoppay-text .pay-logo {
+    background-color: #ffffff;
+    color: #5a31f4;
+    padding: 0.05rem 0.3rem;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    margin-left: 0.1rem;
+}
+
+/* Description Content */
+.product-description-content {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(18, 18, 18, 0.08);
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 0.92rem;
+    color: rgba(18, 18, 18, 0.75);
+}
+
+.highlight-text {
+    font-weight: 700;
+    color: #121212;
+}
+
+.los-mismos {
+    font-style: italic;
+    color: #121212;
+}
+
+.section-subheading {
+    color: #121212;
+    font-size: 1.15rem;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.pack-title-h4 {
+    color: #121212;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+.compatibility-tag {
+    color: #121212;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Offers Grid Section */
+.offers-grid-section {
+    border-top: 1px solid rgba(18, 18, 18, 0.08);
+    padding-top: 4rem;
+}
+
+.offers-grid-section .section-title {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 0.04em;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.offer-card {
+    border: 1px solid rgba(18, 18, 18, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    transition: box-shadow 0.2s ease;
+}
+
+.offer-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.offer-image {
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+.offer-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-badge-sale {
+    position: absolute;
+    bottom: 0.8rem;
+    left: 0.8rem;
+    background-color: #121212;
+    color: #ffffff;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.offer-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.offer-info h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #121212;
+    line-height: 1.3;
+}
+
+.offer-pricing {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+}
+
+.compare-price {
+    text-decoration: line-through;
+    color: rgba(18, 18, 18, 0.4);
+}
+
+.sale-price {
+    font-weight: 700;
+    color: #121212;
+}
+
+.view-offer-link {
+    margin-top: auto;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #121212;
+    text-decoration: underline;
+}
+
+/* Cart Drawer */
+.cart-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.cart-drawer-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cart-drawer {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.cart-drawer-overlay.open .cart-drawer {
+    transform: translateX(0);
+}
+
+.cart-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+    padding-bottom: 1rem;
+}
+
+.cart-drawer-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.btn-close-drawer {
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.cart-drawer-body {
+    flex-grow: 1;
+    padding: 2rem 0;
+    overflow-y: auto;
+}
+
+.empty-cart-message {
+    text-align: center;
+    color: rgba(18, 18, 18, 0.6);
+    font-size: 1rem;
+}
+
+.cart-items-list.hide, .cart-drawer-footer.hide {
+    display: none;
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+    padding-bottom: 1.2rem;
+}
+
+.cart-item img {
+    width: 80px;
+    height: auto;
+    border: 1px solid rgba(18, 18, 18, 0.08);
+    border-radius: 4px;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.cart-item-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.cart-item-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.cart-item-qty {
+    font-size: 0.8rem;
+    color: rgba(18, 18, 18, 0.6);
+}
+
+.btn-remove-item {
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgba(18, 18, 18, 0.5);
+    margin-top: 0.25rem;
+}
+
+.cart-drawer-footer {
+    border-top: 1px solid rgba(18, 18, 18, 0.08);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.shipping-note {
+    font-size: 0.78rem;
+    color: rgba(18, 18, 18, 0.6);
+    text-align: center;
+}
+
+/* Interactive Checkout Modal (Shopify style) */
+.checkout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 300;
+    display: none;
+    overflow-y: auto;
+}
+
+.checkout-overlay.open {
+    display: block;
+}
+
+.checkout-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    position: relative;
+}
+
+.checkout-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.checkout-header-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.checkout-body {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+}
+
+.checkout-form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.checkout-form-column h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.shopify-input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid rgba(18, 18, 18, 0.2);
+    border-radius: 4px;
+    padding: 0 1rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    margin-bottom: 0.8rem;
+}
+
+.shopify-input:focus {
+    border-color: #121212;
+    box-shadow: 0 0 0 1px #121212;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.payment-box {
+    border: 1px solid rgba(18, 18, 18, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.payment-box-header {
+    background-color: #fcfcfc;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.payment-box-body {
+    padding: 1.2rem;
+    background-color: #fafafa;
+}
+
+.btn-pay-now {
+    margin-top: 2rem;
+    height: 52px;
+}
+
+.checkout-summary-column {
+    background-color: #fafafa;
+    border-left: 1px solid rgba(18, 18, 18, 0.08);
+    padding: 2rem;
+    border-radius: 4px;
+    align-self: start;
+}
+
+.summary-product-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.img-badge-wrapper {
+    position: relative;
+}
+
+.img-badge-wrapper img {
+    width: 64px;
+    height: auto;
+    border: 1px solid rgba(18, 18, 18, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.qty-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: rgba(18, 18, 18, 0.7);
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.price-right {
+    margin-left: auto;
+}
+
+.summary-line {
+    height: 1px;
+    background-color: rgba(18, 18, 18, 0.08);
+    margin: 1.5rem 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    color: rgba(18, 18, 18, 0.75);
+}
+
+.summary-row.total-row {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #121212;
+}
+
+/* Success Box */
+.success-box {
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 3rem;
+    text-align: center;
+    border: 1px solid rgba(18, 18, 18, 0.08);
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.check-icon {
+    font-size: 3.5rem;
+    color: #2ec4b6;
+    margin-bottom: 1.5rem;
+}
+
+.download-section {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.btn-download {
+    width: 100%;
+}
+
+/* Shopify Footer styling */
+.shopify-footer {
+    background-color: #f3f3f3;
+    border-top: 1px solid rgba(18, 18, 18, 0.08);
+    padding: 5rem 0 3rem 0;
+    margin-top: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr 1.2fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.footer-col h2, .footer-col h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 1.2rem;
+}
+
+.footer-col p {
+    font-size: 0.88rem;
+    color: rgba(18, 18, 18, 0.75);
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-col ul a {
+    font-size: 0.88rem;
+    color: rgba(18, 18, 18, 0.75);
+}
+
+.footer-col ul a:hover {
+    text-decoration: underline;
+    color: #121212;
+}
+
+.reviews-col .stars {
+    color: #ffb703;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(18, 18, 18, 0.08);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: rgba(18, 18, 18, 0.6);
+}
+
+.footer-payments {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+    color: rgba(18, 18, 18, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .checkout-body {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-grid {
+        grid-template-columns: auto 1fr;
+    }
+    .header-nav {
+        display: none;
+    }
+    .header-logo {
+        grid-column: 1;
+    }
+    .header-icons {
+        grid-column: 2;
+    }
+    
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
